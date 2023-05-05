@@ -1,3 +1,4 @@
+import MyObject.MyObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,25 +22,4 @@ public class JsonParsingTest {
         Assertions.assertArrayEquals(new String[]{"value1", "value2", "value3"}, myObject.getValues());
     }
 
-    private static class MyObject {
-
-        private String name;
-        private String[] values;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String[] getValues() {
-            return values;
-        }
-
-        public void setValues(String[] values) {
-            this.values = values;
-        }
-    }
 }
